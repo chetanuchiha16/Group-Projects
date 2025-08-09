@@ -6,5 +6,5 @@
 __pycache__/
 *.db
 =======
-.pyc
+*.pyc
 >>>>>>> 8ab8d8deeca816de05f3c80fc5d31d78db8d9196

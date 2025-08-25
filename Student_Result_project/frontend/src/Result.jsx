@@ -26,7 +26,7 @@ export default function Result({ usn, semester }) {
     }, [usn, semester]);
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4">
+        <div className="max-h-full min-w-full flex items-center justify-center p-4">
             <div className="w-full sm:w-[95vw] md:w-[85vw] h-auto min-h-[75vh] flex justify-center items-center border-4 border-black rounded-xl dark:text-white dark:bg-[#1a1a1a] text-black backdrop-blur-sm p-4 overflow-hidden">
                 {error && (
                     <p className="text-red-500 font-semibold text-center">{error}</p>
@@ -61,7 +61,7 @@ export default function Result({ usn, semester }) {
                                         className="bg-gray-100 dark:bg-neutral-800 p-3 rounded-lg shadow-sm"
                                     >
                                         <span className="font-medium">
-                                            {idx + 1}. {sub.code}
+                                            {idx + 1}. {sub.subject_name} ({sub.code})
                                         </span>
                                         <br />
                                         IA: <span className="font-semibold">{sub.ia}</span>,
@@ -89,7 +89,7 @@ export default function Result({ usn, semester }) {
                             <a
                                 href={data.pdf_url}
                                 download
-                                className="inline-block px-4 sm:px-6 py-2 rounded-full bg-blue-600 text-white font-bold text-sm sm:text-base hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+                                className="inline-block px-4 sm:px-6 py-2 rounded-full bg-blue-600 !text-white font-bold text-sm sm:text-base hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
                             >
                                 📄 Download Report
                             </a>

@@ -4,6 +4,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Result from "./Result";
 import Classroom from "./Classroom";
 import LogoutButton from "./LogoutButton";
+import MenteeRecieveEmails from "./MenteeRecieveEmails";
 
 export default function Student() {
   const navigate = useNavigate();
@@ -164,6 +165,18 @@ export default function Student() {
           </div>
         </section>
 
+            <div className="w-full max-w-6xl flex justify-center items-center">
+                {selectedTab === "result" && (
+                    <Result usn={id} semester={currentSem} />
+                )}
+                {selectedTab === "classroom" && <Classroom />}
+                {selectedTab === "mentee" && <MenteeRecieveEmails usn={id} />}
+                {/* {selectedTab === "none" && <div className="w-[80vw] h-[70vh] flex justify-center items-center border-4 border-black rounded-xl dark:text-white dark:bg-[#1a1a1a] text-black backdrop-blur-sm p-4 overflow-hidden"></div>}  */}
+
+                {/* {selectedTab === "notes" && <FileExplorer />}  */}
+            </div>
+        </main>
+    );
         {/* Main content */}
         <section>
           {selectedTab === "" && (

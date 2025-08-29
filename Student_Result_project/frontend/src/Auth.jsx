@@ -47,29 +47,29 @@ export default function Auth() {
       .finally(() => setLoading(false));
   }, [navigate, who]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post(
-        `${API_BASE}/auth`,
-        { who, username, password },
-        { withCredentials: true }
-      )
-      .then((res) => {
-        const { data } = res;
-        if (data.message) {
-          setUser({ username: data.id, name: data.name, role: who });
-          navigate(`/auth/${who}/${data.id}`, {
-            state: { who, id: data.id, name: data.name },
-          });
-        } else {
-          alert(`${data.error}`);
-        }
-      })
-      .catch((err) => {
-        alert(err.response?.data?.error || "Login failed");
-      });
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+            .post(
+                `${API_BASE}/auth`,
+                { who, username, password },
+                { withCredentials: true } // important!
+            )
+            .then((res) => {
+                const { data } = res;
+                if (data.message) {
+                    setUser({ username: data.id, name: data.name, role: who });
+                    navigate(`/auth/${who}/${data.id}`, {
+                        state: { who, id: data.id, name: data.name , mentor_id:data.mentor_id},
+                    });
+                } else {
+                    alert(`${data.error}`);
+                }
+            })
+            .catch((err) => {
+                alert(err.response?.data?.error || "Login failed");
+            });
+    };
 
   function handleForgot(email) {
     axios

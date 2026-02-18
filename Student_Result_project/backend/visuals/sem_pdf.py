@@ -41,7 +41,7 @@ def generate_sem_pdf(selected_semester, university, semester_subject_mapping):
             logger.debug(f"Warning: Could not load logo image. {e}")
 
          # Add college name
-        title = Paragraph(f"<b>{"JSS ACADEMY OF TECHNICAL EDUCATION, BENGALURU"}</b>", styles['Title'])
+        title = Paragraph("<b>JSS ACADEMY OF TECHNICAL EDUCATION, BENGALURU</b>", styles['Title'])
         elements.append(title)
 
 

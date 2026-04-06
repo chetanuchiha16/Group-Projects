@@ -81,7 +81,7 @@ export default function MenteeRecordFilling({ usn, name }) {
 
     return (
         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-200 dark:text-white text-center">
                 Mentee Record Form
             </h2>
 
@@ -174,7 +174,7 @@ export default function MenteeRecordFilling({ usn, name }) {
                 </div>
 
                 {/* SGPA */}
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mt-4">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 dark:text-gray-200 mt-4">
                     SGPA (Sem 1 - 8)
                 </h3>
                 <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
@@ -192,7 +192,7 @@ export default function MenteeRecordFilling({ usn, name }) {
                 </div>
 
                 {/* Projects */}
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mt-4">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 dark:text-gray-200 mt-4">
                     Projects
                 </h3>
                 {formData.projects.map((proj, i) => (
@@ -237,7 +237,7 @@ export default function MenteeRecordFilling({ usn, name }) {
                 </button>
 
                 {/* Internships */}
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mt-4">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 dark:text-gray-200 mt-4">
                     Internships
                 </h3>
                 {formData.internships.map((intern, i) => (
@@ -267,7 +267,7 @@ export default function MenteeRecordFilling({ usn, name }) {
                 </button>
 
                 {/* Activities */}
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mt-4">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 dark:text-gray-200 mt-4">
                     Activities
                 </h3>
                 {formData.activities.map((act, i) => (
@@ -297,7 +297,7 @@ export default function MenteeRecordFilling({ usn, name }) {
                 </button>
 
                 {/* Summary */}
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mt-4">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 dark:text-gray-200 mt-4">
                     Summary
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -334,7 +334,7 @@ export default function MenteeRecordFilling({ usn, name }) {
             </form>
 
             {message && (
-                <p className="mt-4 text-center text-sm text-gray-700 dark:text-gray-300">
+                <p className="mt-4 text-center text-sm text-gray-700 dark:text-gray-300 dark:text-gray-300">
                     {message}
                 </p>
             )}

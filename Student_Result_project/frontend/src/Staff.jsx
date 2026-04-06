@@ -42,7 +42,7 @@ export default function Staff() {
                     alt="JSS Logo"
                     className="drop-shadow-2xl w-28 sm:w-32 md:w-40"
                 />
-                <div className="text-2xl mt-4 sm:mt-0 sm:text-3xl sm:mr-23 md:text-4xl font-bold text-gray-800 dark:text-gray-100 text-center">
+                <div className="text-2xl mt-4 sm:mt-0 sm:text-3xl sm:mr-23 md:text-4xl font-bold text-gray-900 dark:text-gray-200 dark:text-gray-100 text-center">
                     Staff Dashboard
                 </div>
                 <div>
@@ -51,7 +51,7 @@ export default function Staff() {
             </div>
 
             {/* Divider */}
-            <div className="w-[95%] mx-auto h-[2px] bg-gray-300 my-4 mt-[-4] rounded shadow-sm"></div>
+            <div className="w-[95%] mx-auto h-[2px] bg-gray-300 dark:bg-gray-700 my-4 mt-[-4] rounded shadow-sm"></div>
 
             {/* Welcome Section */}
             <div className="space-y-2 mb-8 mt-2 text-center sm:text-center lg:text-center">
@@ -59,7 +59,7 @@ export default function Staff() {
                     Welcome , {name || "Staff Member"}
                 </p>
 
-                <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 dark:text-gray-300 max-w-3xl mx-auto">
                     Manage results, classroom sessions, and communications
                     efficiently from your dashboard.
                 </p>
@@ -69,7 +69,7 @@ export default function Staff() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto">
                 <div
-                    className="bg-red-300 dark:bg-red-800 text-black dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-red-400 dark:hover:bg-red-700 transition-all duration-200 "
+                    className="bg-red-300 dark:bg-red-800 text-gray-900 dark:text-white dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-red-400 dark:hover:bg-red-700 transition-all duration-200 "
                     onClick={() => navigate(`/auth/Staff/${id}/StaffResults`)}
                 >
                     <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
@@ -81,7 +81,7 @@ export default function Staff() {
                 </div>
 
                 <div
-                    className="bg-blue-300 dark:bg-blue-800 text-black dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-blue-400 dark:hover:bg-blue-700 transition-all duration-200"
+                    className="bg-blue-300 dark:bg-blue-800 text-gray-900 dark:text-white dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-blue-400 dark:hover:bg-blue-700 transition-all duration-200"
                     onClick={() => {
                         navigate(`/auth/Staff/${id}/SendEmails`);
                     }}
@@ -96,7 +96,7 @@ export default function Staff() {
                 </div>
 
                 <div
-                    className="bg-green-300 dark:bg-green-800 text-black dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-green-400 dark:hover:bg-green-700 transition-all duration-200"
+                    className="bg-green-300 dark:bg-green-800 text-gray-900 dark:text-white dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-green-400 dark:hover:bg-green-700 transition-all duration-200"
                     onClick={() => navigate(`/auth/Staff/${id}/UploadResults`)}
                 >
                     <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
@@ -109,7 +109,7 @@ export default function Staff() {
                 </div>
 
                 <div
-                    className="bg-yellow-200 dark:bg-yellow-700 text-black dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all duration-200"
+                    className="bg-yellow-200 dark:bg-yellow-700 text-gray-900 dark:text-white dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all duration-200"
                     onClick={() => navigate(`/auth/Staff/${id}/StaffClassroom`)}
                 >
                     <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
@@ -121,7 +121,7 @@ export default function Staff() {
                     </p>
                 </div>
                 <div
-                    className="bg-orange-200 dark:bg-orange-700 text-black dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-orange-300 dark:hover:bg-orange-600 transition-all duration-200"
+                    className="bg-orange-200 dark:bg-orange-700 text-gray-900 dark:text-white dark:text-white cursor-pointer rounded-xl shadow-lg p-6 sm:p-8 hover:bg-orange-300 dark:hover:bg-orange-600 transition-all duration-200"
                     onClick={() =>
                         navigate(`/auth/Staff/${id}/MentorDashboard`, {
                             state: { mentor_id },

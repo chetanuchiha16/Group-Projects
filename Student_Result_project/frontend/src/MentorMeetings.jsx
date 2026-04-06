@@ -122,7 +122,7 @@ export default function MentorMeetings({ mentorId }) {
                 className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
                     title && date && venue && !loading
                         ? "bg-blue-600 text-white hover:bg-blue-700"
-                        : "!bg-gray-300 !text-gray-600 !cursor-not-allowed hover:!border-white"
+                        : "!bg-gray-300 dark:bg-gray-700 !text-gray-600 dark:text-gray-400 !cursor-not-allowed hover:!border-white"
                 }`}
             >
                 <CalendarDays className="w-4 h-4" />

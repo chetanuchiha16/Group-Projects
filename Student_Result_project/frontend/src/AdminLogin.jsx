@@ -20,7 +20,7 @@ export default function AdminLogin() {
           placeholder="Enter secret"
           value={secret}
           onChange={(e) => setSecret(e.target.value)}
-          className="w-full px-3 py-2 border rounded-lg bg-white dark:bg-zinc-800 border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full px-3 py-2 border rounded-lg bg-white dark:bg-zinc-800 border-gray-300 dark:border-zinc-600 text-gray-900 dark:text-gray-200 dark:text-gray-200 mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
         <button
           onClick={handleLogin}

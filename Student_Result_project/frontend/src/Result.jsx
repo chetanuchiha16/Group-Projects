@@ -70,7 +70,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Name
                                 </p>
-                                <p className="font-medium text-gray-800 dark:text-gray-100 truncate">
+                                <p className="font-medium text-gray-900 dark:text-gray-200 dark:text-gray-100 truncate">
                                     {data.name}
                                 </p>
                             </div>
@@ -78,7 +78,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     USN
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200 truncate">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200 truncate">
                                     {data.usn}
                                 </p>
                             </div>
@@ -86,7 +86,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     SGPA
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.sgpa.toFixed(2)}
                                 </p>
                             </div>
@@ -94,7 +94,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Percentage
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.percentage.toFixed(2)}%
                                 </p>
                             </div>
@@ -102,7 +102,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Total Marks
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.total_marks}
                                 </p>
                             </div>
@@ -110,7 +110,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Credits
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.credits}
                                 </p>
                             </div>
@@ -118,7 +118,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     CGPA
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.cgpa.toFixed(2)}
                                 </p>
                             </div>
@@ -149,12 +149,12 @@ export default function Result({ usn, semester, view }) {
                                 {data.subjects.map((sub, idx) => (
                                     <div
                                         key={idx}
-                                        className="bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-md p-3"
+                                        className="bg-gray-50 dark:bg-gray-800 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-md p-3"
                                     >
                                         <div className="flex items-start justify-between gap-3">
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex items-center justify-between">
-                                                    <div className="text-sm font-medium text-gray-800 dark:text-gray-100 truncate">
+                                                    <div className="text-sm font-medium text-gray-900 dark:text-gray-200 dark:text-gray-100 truncate">
                                                         {idx + 1}.{" "}
                                                         {sub.subject_name}
                                                     </div>
@@ -229,7 +229,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Name
                                 </p>
-                                <p className="font-medium text-gray-800 dark:text-gray-100 truncate">
+                                <p className="font-medium text-gray-900 dark:text-gray-200 dark:text-gray-100 truncate">
                                     {data.name}
                                 </p>
                             </div>
@@ -237,7 +237,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     USN
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200 truncate">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200 truncate">
                                     {data.usn}
                                 </p>
                             </div>
@@ -245,7 +245,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     SGPA
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {(data.sgpa ?? 0).toFixed(2)}
                                 </p>
                             </div>
@@ -253,7 +253,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Percentage
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {(data.percentage ?? 0).toFixed(2)}%
                                 </p>
                             </div>
@@ -261,7 +261,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Total Marks
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.total_marks ?? "-"}
                                 </p>
                             </div>
@@ -269,7 +269,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     Credits
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {data.credits ?? "-"}
                                 </p>
                             </div>
@@ -277,7 +277,7 @@ export default function Result({ usn, semester, view }) {
                                 <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-300">
                                     CGPA
                                 </p>
-                                <p className="font-medium text-gray-700 dark:text-gray-200">
+                                <p className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     {(data.cgpa ?? 0).toFixed(2)}
                                 </p>
                             </div>
@@ -309,12 +309,12 @@ export default function Result({ usn, semester, view }) {
                                     subjects.map((sub, idx) => (
                                         <div
                                             key={idx}
-                                            className="bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-md p-3"
+                                            className="bg-gray-50 dark:bg-gray-800 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-md p-3"
                                         >
                                             <div className="flex items-start justify-between gap-3">
                                                 <div className="flex-1 min-w-0">
                                                     <div className="flex items-center justify-between">
-                                                        <div className="text-sm font-medium text-gray-800 dark:text-gray-100 truncate">
+                                                        <div className="text-sm font-medium text-gray-900 dark:text-gray-200 dark:text-gray-100 truncate">
                                                             {idx + 1}.{" "}
                                                             {sub.subject_name}
                                                         </div>

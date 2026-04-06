@@ -189,7 +189,7 @@ export default function OverallResults() {
                             return (
                                 <React.Fragment key={student.usn}>
                                     <tr
-                                        className={`cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${
+                                        className={`cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800 ${
                                             isExpanded
                                                 ? "bg-gray-100 dark:bg-gray-800"
                                                 : ""
@@ -223,7 +223,7 @@ export default function OverallResults() {
                                         </td>
                                     </tr>
                                     {isExpanded && (
-                                        <tr className="bg-gray-50 dark:bg-gray-900">
+                                        <tr className="bg-gray-50 dark:bg-gray-800 dark:bg-gray-900">
                                             <td
                                                 colSpan={7}
                                                 className="px-4 py-2 text-xs"

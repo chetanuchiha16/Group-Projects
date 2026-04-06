@@ -36,7 +36,7 @@ export default function ForgotPassword({ onClose }) {
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center rounded-3xl justify-center z-50 p-4">
-            <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl shadow-2xl p-6 sm:p-8 w-full max-w-md animate-fadeIn">
+            <div className="bg-white/80 dark:bg-white/20 backdrop-blur-lg border border-gray-200 dark:border-white/30 rounded-3xl shadow-2xl p-6 sm:p-8 w-full max-w-md animate-fadeIn">
                 {/* Heading */}
                 <div className="flex flex-col items-center mb-4">
                     <h2 className="text-xl sm:text-2xl font-bold text-white drop-shadow-md">
@@ -70,7 +70,7 @@ export default function ForgotPassword({ onClose }) {
                             placeholder="USN / Username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base"
+                            className="w-full pl-10 pr-4 py-2 rounded-lg bg-white/80 dark:bg-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/70 border border-gray-200 dark:border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base"
                             required
                         />
                     </div>

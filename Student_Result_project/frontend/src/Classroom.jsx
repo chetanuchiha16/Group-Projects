@@ -16,7 +16,7 @@ function FileItem({ name, isFolder, onClick }) {
                     <FaFilePdf className="text-red-500" />
                 )}
             </div>
-            <div className="text-sm text-center break-words text-gray-800 dark:text-gray-200">
+            <div className="text-sm text-center break-words text-gray-900 dark:text-gray-200 dark:text-gray-200">
                 {name}
             </div>
         </div>

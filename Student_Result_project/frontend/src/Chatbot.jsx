@@ -853,7 +853,7 @@ export default function ChatBot() {
                                                                                 s
                                                                             )
                                                                         }
-                                                                        className="cursor-pointer border border-gray-300 rounded px-2 py-1 text-sm text-gray-700 dark:text-white hover:bg-blue-100 dark:hover:text-black shadow transition-transform transform hover:scale-105"
+                                                                        className="cursor-pointer border border-gray-300 rounded px-2 py-1 text-sm text-gray-700 dark:text-gray-300 dark:text-white hover:bg-blue-100 dark:hover:text-gray-900 dark:text-white shadow transition-transform transform hover:scale-105"
                                                                     >
                                                                         {s}
                                                                     </div>
@@ -1154,7 +1154,7 @@ export default function ChatBot() {
                                                 ai: !prev.ai,
                                             }))
                                         }
-                                        className="w-full text-left bg-white/10 backdrop-blur-md 
+                                        className="w-full text-left bg-white/80 dark:bg-white/10 backdrop-blur-md 
            text-purple-300 px-3 py-2 rounded 
            hover:bg-white/15 hover:border hover:border-purple-400 
            transition-all duration-200 ease-in-out transform hover:scale-105"
@@ -1164,7 +1164,7 @@ export default function ChatBot() {
                                     </button>
 
                                     {openSemesters.ai && (
-                                        <div className="mt-3 space-y-4 bg-gray-50 dark:bg-[#2a3447] p-4 rounded-lg shadow-inner text-gray-800 dark:text-gray-200">
+                                        <div className="mt-3 space-y-4 bg-gray-50 dark:bg-gray-800 dark:bg-[#2a3447] p-4 rounded-lg shadow-inner text-gray-900 dark:text-gray-200 dark:text-gray-200">
                                             {/* AI Summary */}
                                             <div className="bg-white dark:bg-[#2a3447] p-4 rounded-lg shadow mt-4">
                                                 <h4 className="font-semibold text-purple-300 mb-2">
@@ -1174,7 +1174,7 @@ export default function ChatBot() {
                                                 {msg.data.ai_summary ? (
                                                     <div className="grid grid-cols-2 gap-2 text-sm">
                                                         {/* Student Name */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 Student:
                                                             </span>{" "}
@@ -1186,7 +1186,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* USN */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 USN:
                                                             </span>{" "}
@@ -1198,7 +1198,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* Semester */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 Current
                                                                 Semester:
@@ -1211,7 +1211,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* Total Marks */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 Marks:
                                                             </span>{" "}
@@ -1223,7 +1223,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* Percentage */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 Percentage:
                                                             </span>{" "}
@@ -1235,7 +1235,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* Obtained Credits */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 Obtained
                                                                 Credits:
@@ -1248,7 +1248,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* SGPA */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 SGPA:
                                                             </span>{" "}
@@ -1260,7 +1260,7 @@ export default function ChatBot() {
                                                         </div>
 
                                                         {/* CGPA */}
-                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                                        <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                                             <span className="font-semibold">
                                                                 CGPA:
                                                             </span>{" "}
@@ -1679,7 +1679,7 @@ export default function ChatBot() {
                                         setSuggestions([]); // hide suggestions
                                         // Do NOT call handleSend here
                                     }}
-                                    className="px-3 py-2 cursor-pointer hover:bg-blue-100 dark:hover:text-black"
+                                    className="px-3 py-2 cursor-pointer hover:bg-blue-100 dark:hover:text-gray-900 dark:text-white"
                                 >
                                     {s}
                                 </li>

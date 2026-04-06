@@ -20,29 +20,29 @@ export default function HelpCard() {
 
             {/* Collapsible content */}
             {open && (
-                <div className="mt-4 text-sm text-gray-700">
-                    <p className="mb-3 text-gray-600">You can interact with the bot using these commands:</p>
+                <div className="mt-4 text-sm text-gray-700 dark:text-gray-300">
+                    <p className="mb-3 text-gray-600 dark:text-gray-400">You can interact with the bot using these commands:</p>
 
                     <div className="grid gap-3">
                         <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
                             <b className="text-purple-700">list</b>
-                            <p className="text-gray-600 text-xs">Show all students</p>
+                            <p className="text-gray-600 dark:text-gray-400 text-xs">Show all students</p>
                         </div>
                         <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
                             <b className="text-purple-700">fetch report [name]</b>
-                            <p className="text-gray-600 text-xs">Get the full student report</p>
+                            <p className="text-gray-600 dark:text-gray-400 text-xs">Get the full student report</p>
                         </div>
                         <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
                             <b className="text-purple-700">backlog report [name]</b>
-                            <p className="text-gray-600 text-xs">View backlog details only</p>
+                            <p className="text-gray-600 dark:text-gray-400 text-xs">View backlog details only</p>
                         </div>
                         <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
                             <b className="text-purple-700">AI summary [name]</b>
-                            <p className="text-gray-600 text-xs">AI-generated performance insights</p>
+                            <p className="text-gray-600 dark:text-gray-400 text-xs">AI-generated performance insights</p>
                         </div>
                         <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
                             <b className="text-purple-700">download report [name]</b>
-                            <p className="text-gray-600 text-xs">Get download links for reports</p>
+                            <p className="text-gray-600 dark:text-gray-400 text-xs">Get download links for reports</p>
                         </div>
                     </div>
                 </div>

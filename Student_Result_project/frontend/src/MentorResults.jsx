@@ -144,7 +144,7 @@ export default function MentorResults({ mentor_id }) {
                   </button>
                   <button
                     onClick={() => toggleExpand(mentee.usn)}
-                    className=" text-gray-800 px-3 py-1 rounded hover:bg-gray-300 transition"
+                    className=" text-gray-900 dark:text-gray-200 px-3 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-700 transition"
                   >
                     {expandedMentees[mentee.usn] ? "Hide Subjects" : "View Subjects"}
                   </button>
@@ -167,7 +167,7 @@ export default function MentorResults({ mentor_id }) {
                                     </button>
                                     <button
                                         onClick={() => toggleExpand(mentee.usn)}
-                                        className="text-gray-800 px-3 py-2 rounded hover:bg-gray-300 transition text-center w-full md:w-auto"
+                                        className="text-gray-900 dark:text-gray-200 px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-700 transition text-center w-full md:w-auto"
                                     >
                                         {expandedMentees[mentee.usn]
                                             ? "Hide Subjects"
@@ -253,10 +253,10 @@ export default function MentorResults({ mentor_id }) {
             {/* Chart Modal */}
             {chartData && selectedMentee && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white p-4 rounded shadow-lg max-w-lg w-full relative">
+                    <div className="bg-white dark:bg-zinc-800 p-4 rounded shadow-lg max-w-lg w-full relative">
                         <button
                             onClick={() => setChartData("")}
-                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 font-bold"
+                            className="absolute top-2 right-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-200 font-bold"
                         >
                             ✕
                         </button>

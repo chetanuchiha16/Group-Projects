@@ -272,7 +272,7 @@ console.log(sessionStorage.getItem("jwt_token"))
                                                         </span>
                                                     )}
                                                 </p>
-                                                <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line">
+                                                <p className="text-gray-700 dark:text-gray-300 dark:text-gray-300 text-sm whitespace-pre-line">
                                                     {msg.message}
                                                 </p>
                                                 <p className="text-xs text-gray-500">
@@ -340,7 +340,7 @@ console.log(sessionStorage.getItem("jwt_token"))
                                         </div>
                                         <button
                                             onClick={() => toggleExpand(s.usn)}
-                                            className="text-sm text-gray-800 dark:text-gray-200 bg-gray-200/60 dark:bg-gray-700/60 px-3 py-1 rounded-xl hover:bg-gray-300/60 dark:hover:bg-gray-600/60"
+                                            className="text-sm text-gray-900 dark:text-gray-200 dark:text-gray-200 bg-gray-200/60 dark:bg-gray-700/60 px-3 py-1 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-700/60 dark:hover:bg-gray-600/60"
                                         >
                                             {expanded[s.usn] ? "Hide" : "Show"}
                                         </button>
@@ -479,7 +479,7 @@ console.log(sessionStorage.getItem("jwt_token"))
                                                                                 </span>
                                                                             )}
                                                                         </p>
-                                                                        <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line">
+                                                                        <p className="text-gray-700 dark:text-gray-300 dark:text-gray-300 text-sm whitespace-pre-line">
                                                                             {
                                                                                 msg.message
                                                                             }

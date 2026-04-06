@@ -101,11 +101,11 @@ export default function MenteeRecieveEmails({ usn }) {
                                     className={`p-4 cursor-pointer transition ${
                                         selectedMessage?.id === msg.id
                                             ? "bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500"
-                                            : "hover:bg-gray-50 dark:hover:bg-gray-700"
+                                            : "hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
                                     }`}
                                     onClick={() => fetchMessageDetail(msg.id)}
                                 >
-                                    <p className="font-medium text-gray-800 dark:text-gray-200 truncate">
+                                    <p className="font-medium text-gray-900 dark:text-gray-200 dark:text-gray-200 truncate">
                                         {msg.subject || "No subject"}
                                     </p>
                                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
@@ -150,7 +150,7 @@ export default function MenteeRecieveEmails({ usn }) {
                                         key={m.id}
                                         className="p-4 border-b border-gray-100 dark:border-gray-700"
                                     >
-                                        <p className="font-medium text-gray-800 dark:text-gray-200 truncate">
+                                        <p className="font-medium text-gray-900 dark:text-gray-200 dark:text-gray-200 truncate">
                                             {m.title}
                                         </p>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -179,7 +179,7 @@ export default function MenteeRecieveEmails({ usn }) {
                                     From:{" "}
                                     {selectedMessage.mentor_name || "Unknown"}
                                 </p>
-                                <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-xl text-gray-700 dark:text-gray-200 whitespace-pre-line shadow-inner">
+                                <div className="bg-gray-50 dark:bg-gray-800 dark:bg-gray-900 p-4 rounded-xl text-gray-700 dark:text-gray-300 dark:text-gray-200 whitespace-pre-line shadow-inner">
                                     {selectedMessage.message}
                                 </div>
                             </div>

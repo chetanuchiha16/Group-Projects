@@ -339,7 +339,7 @@ export default function SendEmails() {
                                     <h3 className="font-semibold">
                                         {msg.subject}
                                     </h3>
-                                    <p className="text-gray-700">
+                                    <p className="text-gray-700 dark:text-gray-300">
                                         {msg.message}
                                     </p>
                                     <span className="text-xs text-gray-500">

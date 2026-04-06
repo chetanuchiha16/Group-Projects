@@ -13,7 +13,7 @@ export default function StaffResults() {
   ];
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto shadow-xl rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-hidden">
         
         {/* Tabs */}
@@ -26,7 +26,7 @@ export default function StaffResults() {
                 ${
                   activeTab === tab.id
                     ? "bg-blue-500 text-white shadow-inner"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    : "text-gray-700 dark:text-gray-300 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-700"
                 }`}
             >
               {tab.label}
@@ -35,7 +35,7 @@ export default function StaffResults() {
         </div>
 
         {/* Tab Content */}
-        <div className="p-5 sm:p-6 text-gray-800 dark:text-gray-100">
+        <div className="p-5 sm:p-6 text-gray-900 dark:text-gray-200 dark:text-gray-100">
           {activeTab === "semester" && <SemesterResults />}
           {activeTab === "subject" && <SubjectResults />}
           {activeTab === "overall" && <OverallResults />}

@@ -52,7 +52,7 @@ export default function ParentResult() {
           </div>
 
           {/* Title */}
-          <div className="text-[22px] sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 text-center">
+          <div className="text-[22px] sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 dark:text-gray-100 text-center">
             {t("title")}
           </div>
 
@@ -84,14 +84,14 @@ export default function ParentResult() {
 
 
       {/* Divider */}
-      <div className="w-[95%] mx-auto h-[2px] bg-gray-300 my-4 mt-[-4] rounded shadow-sm"></div>
+      <div className="w-[95%] mx-auto h-[2px] bg-gray-300 dark:bg-gray-700 my-4 mt-[-4] rounded shadow-sm"></div>
 
       {/* Page container */}
       <div className="max-w-4xl mx-auto w-full space-y-6">
         <section className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="w-full flex justify-center sm:justify-start">
             <nav
-              className="inline-flex rounded-md bg-gray-50 dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 overflow-hidden"
+              className="inline-flex rounded-md bg-gray-50 dark:bg-gray-800 dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 overflow-hidden"
               role="tablist"
             ></nav>
           </div>
@@ -103,7 +103,7 @@ export default function ParentResult() {
                   <select
                     value={sem}
                     onChange={(e) => setSem(e.target.value)}
-                    className="appearance-none w-full px-3 py-2 rounded-md bg-white dark:bg-[#0f1720] text-sm text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="appearance-none w-full px-3 py-2 rounded-md bg-white dark:bg-[#0f1720] text-sm text-gray-900 dark:text-gray-200 dark:text-gray-100 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">{t("semester")}</option>
                     {semesterOptions.map((s) => (
@@ -119,7 +119,7 @@ export default function ParentResult() {
                     onClick={() => setView("cards")}
                     className={`px-3 py-2 text-xs sm:text-sm transition ${view === "cards"
                         ? "bg-slate-900 text-white"
-                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                       }`}
                   >
                     {t("card")}
@@ -128,7 +128,7 @@ export default function ParentResult() {
                     onClick={() => setView("table")}
                     className={`px-3 py-2 text-xs sm:text-sm transition ${view === "table"
                         ? "bg-slate-900 text-white"
-                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                       }`}
                   >
                     {t("table")}
@@ -137,7 +137,7 @@ export default function ParentResult() {
                     onClick={() => setView("ai")}
                     className={`px-3 py-2 text-xs sm:text-sm transition ${view === "ai"
                         ? "bg-slate-900 text-white"
-                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                       }`}
                   >
                     {t("AI")}

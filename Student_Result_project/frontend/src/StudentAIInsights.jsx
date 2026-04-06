@@ -161,39 +161,39 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
 
             <div className="gap-4">
                 {openAI && aiData && (
-                    <div className="mt-2 space-y-4  p-4 rounded-lg shadow-inner text-gray-800 dark:text-gray-200">
+                    <div className="mt-2 space-y-4  p-4 rounded-lg shadow-inner text-gray-900 dark:text-gray-200 dark:text-gray-200">
                         {/* 🧠 AI Summary */}
                         <div className="bg-white dark:bg-[#2a3447] p-4 rounded-lg shadow">
                             <h4 className="font-semibold text-purple-300 mb-2">
                                 🧠 AI Summary
                             </h4>
                             <div className="grid grid-cols-2 gap-2 text-sm">
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Student:</b> {aiData.ai_summary.name}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>USN:</b> {aiData.ai_summary.usn}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Current Semester:</b>{" "}
                                     {aiData.ai_summary.semester}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Marks:</b>{" "}
                                     {aiData.ai_summary.total_marks}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Percentage:</b>{" "}
                                     {aiData.ai_summary.percentage}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Credits:</b>{" "}
                                     {aiData.ai_summary.obtained_credits}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>SGPA:</b> {aiData.ai_summary.sgpa}
                                 </div>
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>CGPA:</b> {aiData.ai_summary.cgpa}
                                 </div>
                             </div>
@@ -213,7 +213,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                         aiData.ai_profile.backlogs
                                     ).map(([sem, semData]) => (
                                         <div key={sem} className="mb-3">
-                                            <div className="text-gray-700 font-semibold mb-1">
+                                            <div className="text-gray-700 dark:text-gray-300 font-semibold mb-1">
                                                 {sem}:
                                             </div>
                                             <div className="grid grid-cols-2 gap-2 text-sm">
@@ -328,7 +328,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                         ).map(([tag, avg], i) => (
                                             <div
                                                 key={i}
-                                                className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded text-sm"
+                                                className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded text-sm"
                                             >
                                                 {tag}:{" "}
                                                 <span className="font-semibold">
@@ -349,7 +349,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                             (tip, index) => (
                                                 <div
                                                     key={index}
-                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded text-sm"
+                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded text-sm"
                                                 >
                                                     {tip}
                                                 </div>
@@ -368,7 +368,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                             (advice, index) => (
                                                 <div
                                                     key={index}
-                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded text-sm"
+                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded text-sm"
                                                 >
                                                     {advice}
                                                 </div>
@@ -408,7 +408,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                             .map(([sem, sgpa]) => (
                                                 <div
                                                     key={sem}
-                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded text-sm"
+                                                    className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded text-sm"
                                                 >
                                                     {sem}:{" "}
                                                     <span className="font-semibold">
@@ -443,39 +443,39 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                 )}
 
                 {openPerf && performanceData && (
-                    <div className="mt-2 space-y-4 bg-gray-50 dark:bg-[#2a3447] p-4 rounded-lg shadow-inner text-gray-800">
+                    <div className="mt-2 space-y-4 bg-gray-50 dark:bg-gray-800 dark:bg-[#2a3447] p-4 rounded-lg shadow-inner text-gray-900 dark:text-gray-200">
                         <h3 className="font-semibold text-blue-600 mb-2">
                             📊 Student Performance Dashboard
                         </h3>
 
                         {/* Summary */}
                         <div className="grid grid-cols-2 gap-2 text-sm mb-2">
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>Name:</b> {performanceData.name}
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>USN:</b> {performanceData.usn}
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>Semester:</b> {semester}
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>Total Marks:</b>{" "}
                                 {performanceData.total_marks}
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>Percentage:</b>{" "}
                                 {performanceData.percentage.toFixed(2)}%
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>SGPA:</b> {performanceData.sgpa.toFixed(2)}
                             </div>
-                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                            <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                 <b>CGPA:</b> {performanceData.cgpa.toFixed(2)}
                             </div>
 
                             {performanceData.predicted_next_sgpa && (
-                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                                <div className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 px-2 py-1 rounded">
                                     <b>Predicted Next SGPA:</b>{" "}
                                     {performanceData.predicted_next_sgpa.toFixed(
                                         2
@@ -489,7 +489,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                             <h4 className="font-semibold mb-2">Subjects</h4>
                             <table className="w-full border text-center">
                                 <thead>
-                                    <tr className="border bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200">
+                                    <tr className="border bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200">
                                         <th className="border px-2 py-1">
                                             Code
                                         </th>
@@ -540,7 +540,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                                 </td>
                                                 <td className="border px-2 py-1 text-left text-sm">
                                                     {sub.advice && (
-                                                        <p className="text-black dark:text-white font-medium">
+                                                        <p className="text-gray-900 dark:text-white dark:text-white font-medium">
                                                             {sub.advice}
                                                         </p>
                                                     )}
@@ -568,7 +568,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                                         (advice, i) => (
                                             <div
                                                 key={`advice-${i}`}
-                                                className="bg-gray-100 dark:bg-[#38455c] text-gray-800 dark:text-gray-200 text-black-800 px-4 py-2 rounded shadow-sm hover:shadow-md transition"
+                                                className="bg-gray-100 dark:bg-[#38455c] text-gray-900 dark:text-gray-200 dark:text-gray-200 text-gray-900 dark:text-white-800 px-4 py-2 rounded shadow-sm hover:shadow-md transition"
                                             >
                                                 {advice}
                                             </div>
@@ -587,7 +587,7 @@ export default function StudentInsights({ usn = "", semester = "sem1" }) {
                             <div
                                 className="bg-yellow-50 dark:bg-yellow-900/40 
                 p-4 rounded-lg shadow-inner 
-                text-gray-800 dark:text-gray-200 mt-4"
+                text-gray-900 dark:text-gray-200 dark:text-gray-200 mt-4"
                             >
                                 <h4 className="font-semibold text-yellow-700 dark:text-yellow-300 mb-2">
                                     📌 Overall Study Advice

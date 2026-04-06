@@ -281,7 +281,7 @@ export default function SemesterResults() {
                                         {data.results.map((r) => (
                                             <tr
                                                 key={r.subject_code}
-                                                className="hover:bg-gray-50 dark:hover:bg-gray-800"
+                                                className="hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-800"
                                             >
                                                 <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium break-words">
                                                     {r.subject_name}

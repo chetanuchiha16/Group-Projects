@@ -25,7 +25,7 @@ export default function AdminPanel() {
     const [downloadDir, setDownloadDir] = useState("");
     const [pdfZipFile, setPdfZipFile] = useState(null);
     const [pdfExcelFilename, setPdfExcelFilename] = useState(
-        "result_list_YEAR.xlsx"
+        "result_list_YEAR.xlsx",
     );
     // Redirect if no secret
     useEffect(() => {
@@ -61,7 +61,7 @@ export default function AdminPanel() {
         if (!secret) return alert("Enter admin secret");
         localStorage.setItem("admin_secret", secret);
         setStatus(
-            "✅ Secret saved. You can now generate accounts or upload files."
+            "✅ Secret saved. You can now generate accounts or upload files.",
         );
         fetchBatches();
     };
@@ -74,9 +74,9 @@ export default function AdminPanel() {
             const res = await fetch(
                 `${API_BASE}/admin/generate-accounts?mode=${mode}&batch_year=${parseInt(
                     batchYear,
-                    10
+                    10,
                 )}`,
-                { method: "POST", headers: { "X-Admin-Secret": secret } }
+                { method: "POST", headers: { "X-Admin-Secret": secret } },
             );
             if (!res.ok) throw new Error(await res.text());
             const blob = await res.blob();
@@ -103,18 +103,18 @@ export default function AdminPanel() {
             const res = await fetch(
                 `${API_BASE}/admin/upload-emails?batch_year=${parseInt(
                     batchYear,
-                    10
+                    10,
                 )}`,
                 {
                     method: "POST",
                     headers: { "X-Admin-Secret": secret },
                     body: formData,
-                }
+                },
             );
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || "Unknown error");
             setStatus(
-                `✅ Uploaded emails. Inserted ${data.emails_inserted} records and Updated ${data.emails_updated} records.`
+                `✅ Uploaded emails. Inserted ${data.emails_inserted} records and Updated ${data.emails_updated} records.`,
             );
         } catch (err) {
             setStatus("❌ Error: " + err.message);
@@ -133,19 +133,19 @@ export default function AdminPanel() {
             const res = await fetch(
                 `${API_BASE}/admin/upload-mentors?batch_year=${parseInt(
                     batchYear,
-                    10
+                    10,
                 )}`,
                 {
                     method: "POST",
                     headers: { "X-Admin-Secret": secret },
                     body: formData,
-                }
+                },
             );
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || "Unknown error");
 
             setStatus(
-                `✅ Uploaded mentors. Inserted ${data.mentors_inserted} mentors and ${data.mappings_inserted} mappings.`
+                `✅ Uploaded mentors. Inserted ${data.mentors_inserted} mentors and ${data.mappings_inserted} mappings.`,
             );
 
             // 🔽 NEW: fetch and download CSV automatically
@@ -154,7 +154,7 @@ export default function AdminPanel() {
                     `${API_BASE}${data.csv_download_url}`,
                     {
                         headers: { "X-Admin-Secret": secret },
-                    }
+                    },
                 );
                 if (csvRes.ok) {
                     const blob = await csvRes.blob();
@@ -229,20 +229,17 @@ export default function AdminPanel() {
         setStatus("Starting result fetch... (check console for CAPTCHA steps)");
 
         try {
-            const res = await fetch(
-                `${API_BASE}/webscrape/fetch-results`,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        usn_prefix: usnPrefix,
-                        usn_start: parseInt(usnStart, 10),
-                        usn_end: parseInt(usnEnd, 10),
-                        sem: parseInt(sem, 10),
-                        download_dir: downloadDir || undefined,
-                    }),
-                }
-            );
+            const res = await fetch(`${API_BASE}/webscrape/fetch-results`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    usn_prefix: usnPrefix,
+                    usn_start: parseInt(usnStart, 10),
+                    usn_end: parseInt(usnEnd, 10),
+                    sem: parseInt(sem, 10),
+                    download_dir: downloadDir || undefined,
+                }),
+            });
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || "Unknown error");
             setStatus(`✅ Fetch started: ${data.message}`);
@@ -274,7 +271,7 @@ export default function AdminPanel() {
             if (!res.ok) throw new Error(data.error || "Unknown error");
 
             setStatus(
-                `✅ Processed ${data.processed_files.length} PDFs. Excel saved at: ${data.excel_path}`
+                `✅ Processed ${data.processed_files.length} PDFs. Excel saved at: ${data.excel_path}`,
             );
         } catch (err) {
             setStatus("❌ Error: " + err.message);
@@ -283,9 +280,7 @@ export default function AdminPanel() {
 
     const pollJobStatus = async (jobId) => {
         try {
-            const res = await fetch(
-                `${API_BASE}/pdf/job_status/${jobId}`
-            );
+            const res = await fetch(`${API_BASE}/pdf/job_status/${jobId}`);
             const data = await res.json();
             console.log(data);
             if (data.status === "done") {
@@ -315,7 +310,7 @@ export default function AdminPanel() {
                     </p>
 
                     {/* Fetch VTU */}
-                    <h3 className="font-medium mb-2 text-gray-800 dark:text-gray-200">
+                    <h3 className="font-medium mb-2 text-gray-900  dark:text-gray-200">
                         Fetch VTU Results
                     </h3>
                     <input
@@ -323,7 +318,7 @@ export default function AdminPanel() {
                         value={usnPrefix}
                         onChange={(e) => setUsnPrefix(e.target.value)}
                         placeholder="USN Prefix (e.g., 1JS23CS)"
-                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
                     />
                     <div className="flex gap-2 mb-2">
                         <input
@@ -331,20 +326,20 @@ export default function AdminPanel() {
                             value={usnStart}
                             onChange={(e) => setUsnStart(e.target.value)}
                             placeholder="Start"
-                            className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
+                            className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
                         />
                         <input
                             type="number"
                             value={usnEnd}
                             onChange={(e) => setUsnEnd(e.target.value)}
                             placeholder="End"
-                            className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
+                            className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
                         />
                     </div>
                     <select
                         value={sem}
                         onChange={(e) => setSem(e.target.value)}
-                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
                     >
                         <option value="">Select Semester</option>
                         {[1, 2, 3, 4, 5, 6, 7, 8].map((s) => (
@@ -358,7 +353,7 @@ export default function AdminPanel() {
                         value={downloadDir}
                         onChange={(e) => setDownloadDir(e.target.value)}
                         placeholder="Optional Download Directory"
-                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 mb-2 focus:ring-2 focus:ring-indigo-500"
                     />
                     <button
                         onClick={fetchResults}
@@ -368,7 +363,7 @@ export default function AdminPanel() {
                     </button>
 
                     {/* PDF to Excel */}
-                    <h3 className="font-medium mb-2 text-gray-800 dark:text-gray-200 mt-6">
+                    <h3 className="font-medium mb-2 text-gray-900  dark:text-gray-200 mt-6">
                         PDF Zip → Excel
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -380,13 +375,13 @@ export default function AdminPanel() {
                         value={pdfExcelFilename}
                         onChange={(e) => setPdfExcelFilename(e.target.value)}
                         placeholder="Excel filename (e.g., results.xlsx)"
-                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-2 focus:ring-2 focus:ring-teal-500"
+                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900 dark:text-gray-200 mb-2 focus:ring-2 focus:ring-teal-500"
                     />
                     <input
                         type="file"
                         accept=".zip,.rar"
                         onChange={(e) => setPdfZipFile(e.target.files[0])}
-                        className="w-full text-gray-700 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-teal-600 file:text-white hover:file:bg-teal-700 mb-2"
+                        className="w-full text-gray-700  dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-teal-600 file:text-white hover:file:bg-teal-700 mb-2"
                     />
                     <button
                         onClick={uploadPdfZip}
@@ -399,7 +394,9 @@ export default function AdminPanel() {
                 {/* Status */}
                 {status && (
                     <div className="shadow-xl rounded-2xl p-6 bg-white/80 dark:bg-white/5 backdrop-blur-lg border border-gray-200 dark:border-white/10">
-                        <p className="text-sm text-gray-700 dark:text-gray-300">{status}</p>
+                        <p className="text-sm text-gray-700  dark:text-gray-300">
+                            {status}
+                        </p>
                     </div>
                 )}
             </div>
@@ -422,7 +419,7 @@ export default function AdminPanel() {
                                 value={secret}
                                 onChange={(e) => setSecret(e.target.value)}
                                 placeholder="Enter admin secret"
-                                className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-3 focus:ring-2 focus:ring-yellow-500"
+                                className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200 mb-3 focus:ring-2 focus:ring-yellow-500"
                             />
                             <button
                                 onClick={handleSecretSubmit}
@@ -454,7 +451,7 @@ export default function AdminPanel() {
                             onChange={(e) =>
                                 setBatchYear(parseInt(e.target.value, 10))
                             }
-                            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 mb-4 focus:ring-2 focus:ring-orange-500"
+                            className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900 dark:text-gray-200 mb-4 focus:ring-2 focus:ring-orange-500"
                         >
                             {availableBatches.map((b) => (
                                 <option key={b} value={b}>
@@ -471,7 +468,7 @@ export default function AdminPanel() {
                                     setNewBatchYear(e.target.value)
                                 }
                                 placeholder="New batch year"
-                                className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-orange-500"
+                                className="flex-1 px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900 dark:text-gray-200 focus:ring-2 focus:ring-orange-500"
                             />
                             <button
                                 onClick={createBatch}
@@ -506,7 +503,7 @@ export default function AdminPanel() {
                                     batch.
                                 </p>
                                 <div>
-                                    <label className="text-gray-800 dark:text-gray-200 text-sm mb-1 block">
+                                    <label className="text-gray-900  dark:text-gray-200 text-sm mb-1 block">
                                         Mode
                                     </label>
                                     <select
@@ -514,7 +511,7 @@ export default function AdminPanel() {
                                         onChange={(e) =>
                                             setMode(e.target.value)
                                         }
-                                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-800 dark:text-gray-200"
+                                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-600 text-gray-900  dark:text-gray-200"
                                     >
                                         <option value="missing">
                                             Only Missing
@@ -561,14 +558,14 @@ export default function AdminPanel() {
                                     onChange={(e) =>
                                         setEmailFile(e.target.files[0])
                                     }
-                                    className="w-full text-gray-700 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-green-600 file:text-white hover:file:bg-green-700"
+                                    className="w-full text-gray-700  dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-green-600 file:text-white hover:file:bg-green-700"
                                 />
 
                                 <div className="bg-gray-200 dark:bg-zinc-700 h-px my-2" />
 
                                 <div className="text-sm text-gray-600 dark:text-gray-400">
                                     <span>ℹ️ Required CSV Headers:</span>
-                                    <table className="mt-1 border border-gray-300 dark:border-gray-600 text-left text-gray-700 dark:text-gray-300 w-full text-xs">
+                                    <table className="mt-1 border border-gray-300 dark:border-gray-600 text-left text-gray-700  dark:text-gray-300 w-full text-xs">
                                         <thead>
                                             <tr className="border-b border-gray-200 dark:border-gray-600">
                                                 <th className="px-2 py-1">
@@ -663,14 +660,14 @@ export default function AdminPanel() {
                                     onChange={(e) =>
                                         setMentorFile(e.target.files[0])
                                     }
-                                    className="w-full text-gray-700 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-purple-600 file:text-white hover:file:bg-purple-700"
+                                    className="w-full text-gray-700  dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-purple-600 file:text-white hover:file:bg-purple-700"
                                 />
 
                                 <div className="bg-gray-200 dark:bg-zinc-700 h-px my-2" />
 
                                 <div className="text-sm text-gray-600 dark:text-gray-400">
                                     <span>ℹ️ Required CSV Headers:</span>
-                                    <table className="mt-1 border border-gray-300 dark:border-gray-600 text-left text-gray-700 dark:text-gray-300 w-full text-xs">
+                                    <table className="mt-1 border border-gray-300 dark:border-gray-600 text-left text-gray-700  dark:text-gray-300 w-full text-xs">
                                         <thead>
                                             <tr className="border-b border-gray-200 dark:border-gray-600">
                                                 <th className="px-2 py-1">

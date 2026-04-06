@@ -66,7 +66,7 @@ export default function Student() {
                         />
                     </div>
 
-                    <div className="text-[24px] sm:mt-0 sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 text-center">
+                    <div className="text-[24px] sm:mt-0 sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 dark:text-gray-100 text-center">
                         Student Dashboard
                     </div>
 
@@ -76,7 +76,7 @@ export default function Student() {
                 </div>
             </div>
 
-            <div className="w-[95%] mx-auto h-[2px] bg-gray-300 my-4 mt-[-4] rounded shadow-sm"></div>
+            <div className="w-[95%] mx-auto h-[2px] bg-gray-300 dark:bg-gray-700 my-4 mt-[-4] rounded shadow-sm"></div>
 
             {/* Page container */}
             <div className="max-w-5xl mx-auto w-full space-y-6">
@@ -87,7 +87,7 @@ export default function Student() {
                             <p className="text-xs text-gray-500 dark:text-gray-300">
                                 Name
                             </p>
-                            <p className="text-sm sm:text-base font-medium text-gray-800 dark:text-gray-100 truncate">
+                            <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-gray-200 dark:text-gray-100 truncate">
                                 {finalName}
                             </p>
                         </div>
@@ -96,7 +96,7 @@ export default function Student() {
                             <p className="text-xs text-gray-500 dark:text-gray-300">
                                 USN
                             </p>
-                            <p className="text-sm font-medium text-gray-700 dark:text-gray-200 truncate">
+                            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200 truncate">
                                 {finalUsn}
                             </p>
                         </div>
@@ -105,7 +105,7 @@ export default function Student() {
                             <p className="text-xs text-gray-500 dark:text-gray-300">
                                 Branch
                             </p>
-                            <p className="text-sm font-medium text-gray-700 dark:text-gray-200 truncate">
+                            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200 truncate">
                                 {finalBranch}
                             </p>
                         </div>
@@ -123,7 +123,7 @@ export default function Student() {
                     {/* Tabs */}
                     <div className="w-full flex justify-center sm:justify-start">
                         <nav
-                            className="inline-flex rounded-md bg-gray-50 dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 overflow-hidden"
+                            className="inline-flex rounded-md bg-gray-50 dark:bg-gray-800 dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 overflow-hidden"
                             role="tablist"
                             aria-label="Student tabs"
                         >
@@ -133,7 +133,7 @@ export default function Student() {
                                 onClick={() => setSelectedTab("result")}
                                 className={`px-3 py-2 text-xs sm:text-sm transition duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 ${selectedTab === "result"
                                     ? "bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold"
-                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                     }`}
                             >
                                 Result
@@ -145,7 +145,7 @@ export default function Student() {
                                 onClick={() => setSelectedTab("classroom")}
                                 className={`px-3 py-2 text-xs sm:text-sm transition duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 ${selectedTab === "classroom"
                                     ? "bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold"
-                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                     }`}
                             >
                                 Classroom
@@ -157,7 +157,7 @@ export default function Student() {
                                 onClick={() => setSelectedTab("mentee")}
                                 className={`px-3 py-2 text-xs sm:text-sm transition duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 ${selectedTab === "mentee"
                                     ? "bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold"
-                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                     }`}
                             >
                                 Mentee
@@ -169,7 +169,7 @@ export default function Student() {
                                 onClick={() => setSelectedTab("record")}
                                 className={`px-3 py-2 text-xs sm:text-sm transition duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 ${selectedTab === "record"
                                     ? "bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold"
-                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                     }`}
                             >
                                 Record
@@ -189,7 +189,7 @@ export default function Student() {
                                         onChange={(e) =>
                                             setCurrentSem(e.target.value)
                                         }
-                                        className="appearance-none w-full px-3 py-2 rounded-md bg-white dark:bg-[#0f1720] text-sm text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="appearance-none w-full px-3 py-2 rounded-md bg-white dark:bg-[#0f1720] text-sm text-gray-900 dark:text-gray-200 dark:text-gray-100 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     >
                                         <option value="">
                                             Select Semester
@@ -208,7 +208,7 @@ export default function Student() {
                                         onClick={() => setView("cards")}
                                         className={`px-3 py-2 text-xs sm:text-sm transition ${view === "cards"
                                             ? "bg-slate-900 text-white"
-                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                             }`}
                                     >
                                         Cards
@@ -217,7 +217,7 @@ export default function Student() {
                                         onClick={() => setView("table")}
                                         className={`px-3 py-2 text-xs sm:text-sm transition ${view === "table"
                                             ? "bg-slate-900 text-white"
-                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                             }`}
                                     >
                                         Table
@@ -226,7 +226,7 @@ export default function Student() {
                                         onClick={() => setView("ai")}
                                         className={`px-3 py-2 text-xs sm:text-sm transition ${view === "ai"
                                             ? "bg-slate-900 text-white"
-                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                            : "text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-800"
                                             }`}
                                     >
                                         {"AI"}
@@ -236,7 +236,7 @@ export default function Student() {
                         ) : (
                             <div className="text-sm text-gray-500 dark:text-gray-400 text-center sm:text-left">
                                 Click{" "}
-                                <span className="font-medium text-gray-700 dark:text-gray-200">
+                                <span className="font-medium text-gray-700 dark:text-gray-300 dark:text-gray-200">
                                     Result
                                 </span>{" "}
                                 to pick a semester.

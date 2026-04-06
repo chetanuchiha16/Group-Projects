@@ -91,7 +91,7 @@ export default function MentorRecords({ mentor_id }) {
             {/* Modal for viewing PDF */}
             {selectedPdf && pdfUrl && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white w-4/5 h-4/5 p-4 relative rounded-lg shadow-lg">
+                    <div className="bg-white dark:bg-zinc-800 w-4/5 h-4/5 p-4 relative rounded-lg shadow-lg">
                         <button
                             onClick={() => {
                                 setSelectedPdf(null);

@@ -45,7 +45,7 @@ export default function ResetPassword() {
 
     return (
         <div className="w-full min-h-screen relative bg-opacity-30 backdrop-blur-sm px-4 sm:px-6 md:px-8 flex items-center justify-center">
-            <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl shadow-2xl p-6 sm:p-8 w-full max-w-md animate-fadeIn">
+            <div className="bg-white/80 dark:bg-white/20 backdrop-blur-lg border border-gray-200 dark:border-white/30 rounded-3xl shadow-2xl p-6 sm:p-8 w-full max-w-md animate-fadeIn">
                 <h2 className="text-2xl font-bold text-white drop-shadow-md text-center mb-6">
                     Set New Password
                 </h2>
@@ -58,7 +58,7 @@ export default function ResetPassword() {
                             placeholder="New Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full pl-10 pr-10 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            className="w-full pl-10 pr-10 py-2 rounded-lg bg-white/80 dark:bg-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/70 border border-gray-200 dark:border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <div
                             onClick={() => setShowPassword(!showPassword)}
@@ -75,7 +75,7 @@ export default function ResetPassword() {
                             placeholder="Confirm Password"
                             value={confirm}
                             onChange={(e) => setConfirm(e.target.value)}
-                            className="w-full pl-10 pr-10 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            className="w-full pl-10 pr-10 py-2 rounded-lg bg-white/80 dark:bg-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/70 border border-gray-200 dark:border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <div
                             onClick={() => setShowConfirm(!showConfirm)}

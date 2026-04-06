@@ -285,6 +285,8 @@ export default function AdminPanel() {
             console.log(data);
             if (data.status === "done") {
                 setStatus(`✅ Done! Excel at ${data.excel_path}`);
+            } else if (data.status === "failed") {
+                setStatus(`❌ Job failed: ${data.error || "Unknown error"}`);
             } else {
                 setStatus(`Processing... ${data.progress} PDFs done`);
                 setTimeout(() => pollJobStatus(jobId), 1000); // poll every second

@@ -121,6 +121,10 @@ def process_archive_background(job_id, excel_filename, archive_path):
                 "error": f"Excel upload to Supabase failed: {e}"
             })
         save_job(job_id, job_data)
+    except Exception as e:
+        logger.error(f"❌ Unexpected error in background job {job_id}: {e}")
+        job_data.update({"status": "failed", "error": f"Unexpected error: {e}"})
+        save_job(job_id, job_data)
     finally:
         try:
             shutil.rmtree(tmpdir_path)

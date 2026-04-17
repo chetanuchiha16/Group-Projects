@@ -14,5 +14,6 @@ __pycache__/
 # Ignore project Postgres DB
 ProjectDBData/
 ExcelInputs/
-.env
 *.xlsx
+config.bat
+node_modules
